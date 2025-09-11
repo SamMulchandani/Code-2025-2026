@@ -17,6 +17,7 @@
 //  6a) Return -1
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class BinarySearch {
     public static int binarySearch(int[] list, int key){
@@ -29,7 +30,7 @@ public class BinarySearch {
             else if(key > list[mid])
                 start = mid + 1;
             else if (key < list[mid])
-                end = mid;
+                end = mid - 1;
         }
         return -1;
     }
@@ -40,10 +41,18 @@ public class BinarySearch {
             list[i] = (int) (Math.random() * 101);
         }
         Arrays.sort(list);
-        int key = (int) (Math.random() * 101);
+        System.out.println(Arrays.toString(list) + "\n");
 
-        System.out.println(Arrays.toString(list));
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter key:");
+        int key = Integer.parseInt(scanner.nextLine());
+        System.out.println();
+        scanner.close();
+
+        int search = binarySearch(list, key);
+
         System.out.println("Key: " + key);
-        System.out.println(binarySearch(list, key));
+        if(search == -1) System.out.println("Key not found");
+        else System.out.println("Index: " + search);
     }
 }
