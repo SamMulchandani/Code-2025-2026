@@ -4,7 +4,7 @@
 from turtle import *
 
 t = Turtle()
-t.speed(500)
+t.speed(1500)
 
 i = 1
 while(t.xcor() <= 400) & (t.ycor() <= 400):

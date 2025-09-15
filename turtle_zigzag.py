@@ -6,6 +6,7 @@ from turtle import *
 t = Turtle()
 print(t.screen.screensize())
 t.teleport(-400,-400)
+t.speed(799)
 t.left(90)
 
 while(t.xcor() <= 400) & (t.ycor() <= 300):
