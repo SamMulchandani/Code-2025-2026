@@ -3,7 +3,7 @@ class Student:
     #no class variables for now
 
     #init() that initializes instance variables
-    def __init__(self, first, last, grade):
+    def __init__(self, first="None", last="None", grade=-1):
         self.first = first
         self.last = last
         self.grade = grade
