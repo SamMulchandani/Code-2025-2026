@@ -5,17 +5,28 @@ playlist = Playlist()
 cont = True
 while cont:
     print("===PLAYLIST VIEWER===\n")
-    choice = input("What would you like to do?\n(o)pen file\n(v)iew songs\n(q)uit program\n")
+    choice = input("What would you like to do?\n(a)dd song\n(o)pen file\n(s)ave file\n(v)iew songs\n(q)uit program\n>>> ")
 
-    if choice == "o":
+    if choice == "a":
+        title = input("Title? ")
+        artist = input("Artist? ")
+        album = input("Album? ")
+        playlist.add_song_from_info(title,artist,album)
+        print("Song added successfully...\n")
+
+    elif choice == "o":
         filename = input("\nWhat file do you want to open?\n")
-        print("Opening file...")
-        playlist.load(filename)
-        print(f"{filename} loaded successfully...")
+        playlist.load(f"oop_notes/{filename}")
+        print(f"{filename} loaded successfully...\n")
+
+    elif choice == "s":
+        save_file = input("Save to where? ")
+        playlist.save(f"oop_notes/{save_file}")
 
     elif choice == "v":
         print("\nViewing songs...")
         print(playlist)
+        print()
 
     elif choice == "q":
         cont = False
