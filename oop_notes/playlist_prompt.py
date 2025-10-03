@@ -5,7 +5,7 @@ playlist = Playlist()
 cont = True
 while cont:
     print("===PLAYLIST VIEWER===\n")
-    choice = input("What would you like to do?\n(a)dd song\n(o)pen file\n(s)ave file\n(v)iew songs\n(q)uit program\n>>> ")
+    choice = input("What would you like to do?\n(a)dd song\n(o)pen file\n(so)rt\n(s)ave file\n(v)iew songs\n(q)uit program\n>>> ")
 
     if choice == "a":
         title = input("Title? ")
@@ -19,6 +19,17 @@ while cont:
         playlist.load(f"oop_notes/{filename}")
         print(f"{filename} loaded successfully...\n")
 
+    elif choice == "so":
+        sort_type = input("Sort by what?\n(a)rtist\n(t)itle\n")
+        if sort_type == "a":
+            playlist.bubble_sort_by_artist()
+        elif sort_type == "t":
+            playlist.selection_sort_by_title()
+        else:
+            "Invalid choice...\n"
+        print("Playlist sorted successfully...\n")
+
+
     elif choice == "s":
         save_file = input("Save to where? ")
         playlist.save(f"oop_notes/{save_file}")
@@ -30,3 +41,5 @@ while cont:
 
     elif choice == "q":
         cont = False
+    else:
+        print("Invalid choice...")
