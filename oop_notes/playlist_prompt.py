@@ -29,7 +29,6 @@ while cont:
             "Invalid choice...\n"
         print("Playlist sorted successfully...\n")
 
-
     elif choice == "s":
         save_file = input("Save to where? ")
         playlist.save(f"oop_notes/{save_file}")
