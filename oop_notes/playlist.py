@@ -20,6 +20,28 @@ class Playlist:
                 song = Song(parts[0], parts[1], parts[2])
                 self.songs.append(song)
 
+    def find_song_from_info(self, title, artist):
+        for song in self.songs:
+            if song.title == title and song.artist == artist:
+                return song
+        return None
+
+    def find_song_and_edit_info(self, title, artist, new_title, new_artist, new_album):
+        found = self.find_song_from_info(title, artist)
+        if found is not None:
+            if new_title != "":
+                found.title = new_title
+            if new_artist != "":
+                found.artist = new_artist
+            if new_album != "":
+                found.album = new_album
+        
+    def remove(self, title, artist):
+        for i in range(len(self.songs)):
+            if self.songs[i].title == title and \
+            self.songs[i].artist == artist:
+                return self.songs.pop(i)
+
     def selection_sort_by_title(self):
         front = 0
         for front in range(len(self.songs)):

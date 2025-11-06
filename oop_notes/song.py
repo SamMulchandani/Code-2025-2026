@@ -5,4 +5,4 @@ class Song:
         self.album = album
 
     def __str__(self):
-        return f"{self.title} is by {self.artist} and in {self.album}"
+        return f"{self.title}\n--{self.artist}"

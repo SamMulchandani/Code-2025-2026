@@ -7,12 +7,12 @@
 
 from roster import *
 
-
 roster = Roster()
 
 cont = True
 while(cont):
     choice = input("What would you like to do?\n(a)dd student\n(e)dit student\n(r)emove student\n(f)ind student\n(o)pen file\n(s)ave file\n(so)rt by first name\n(v)iew roster\n(q)uit program\n>> ") 
+
     if choice == "a":
         first = input("First name? ")
         last = input("Last name? ")
