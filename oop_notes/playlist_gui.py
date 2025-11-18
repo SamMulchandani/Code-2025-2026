@@ -129,4 +129,5 @@ add_button = ui.button(icon="playlist_add", on_click=lambda: add_dialog.open())
 
 
 dark = ui.dark_mode().enable()
-ui.run()
+ui.run(port=23000)
+# ui.run()

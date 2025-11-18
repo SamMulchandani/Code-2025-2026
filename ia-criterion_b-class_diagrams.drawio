@@ -1,0 +1,63 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="28.2.9">
+  <diagram name="Page-1" id="cGiBRuw3lYLO1mKELvXk">
+    <mxGraphModel dx="1148" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cx2PITXGb1-phFpU49ZU-1" value="Entry" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="87" y="210" width="160" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="cx2PITXGb1-phFpU49ZU-2" value="- title: String&lt;div&gt;&lt;div&gt;- tags : String[]&lt;/div&gt;&lt;/div&gt;&lt;div&gt;- link : String&lt;/div&gt;&lt;div&gt;- dateAdded : Date&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cx2PITXGb1-phFpU49ZU-1">
+          <mxGeometry y="26" width="160" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="cx2PITXGb1-phFpU49ZU-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="cx2PITXGb1-phFpU49ZU-1">
+          <mxGeometry y="100" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="cx2PITXGb1-phFpU49ZU-4" value="+ getTitle() : String&lt;div&gt;+ setTitle(title : String)&lt;/div&gt;&lt;div&gt;+ getTags() : String[]&lt;/div&gt;&lt;div&gt;+ setTags(tags : String[])&lt;/div&gt;&lt;div&gt;+ getLink() : String&lt;/div&gt;&lt;div&gt;+ setLink(link : String)&lt;/div&gt;&lt;div&gt;+ getDate() : Date&lt;/div&gt;&lt;div&gt;+ setDate(date : Date)&lt;/div&gt;&lt;div&gt;+ toString() : String&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cx2PITXGb1-phFpU49ZU-1">
+          <mxGeometry y="108" width="160" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="cx2PITXGb1-phFpU49ZU-5" value="Database" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="210" width="230" height="180" as="geometry">
+            <mxRectangle x="380" y="210" width="90" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cx2PITXGb1-phFpU49ZU-6" value="- entries : Entry[]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cx2PITXGb1-phFpU49ZU-5">
+          <mxGeometry y="26" width="230" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="cx2PITXGb1-phFpU49ZU-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="cx2PITXGb1-phFpU49ZU-5">
+          <mxGeometry y="52" width="230" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="cx2PITXGb1-phFpU49ZU-8" value="+ getEntries() : Entry[]&lt;div&gt;+ getEntries(keywords : String[]) : Entry[]&lt;br&gt;&lt;div&gt;+ setEntries(entries : Entry[])&lt;/div&gt;&lt;div&gt;+ addEntry(entry : Entry) : Entry&lt;/div&gt;&lt;div&gt;+ findEntry(title : String) : Entry&lt;/div&gt;&lt;div&gt;+ removeEntry(title : String) : Entry&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+ sortEntries()&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cx2PITXGb1-phFpU49ZU-5">
+          <mxGeometry y="60" width="230" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="cx2PITXGb1-phFpU49ZU-9" value="DatabaseGUI" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="587" y="210" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="cx2PITXGb1-phFpU49ZU-10" value="- database: Database" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cx2PITXGb1-phFpU49ZU-9">
+          <mxGeometry y="26" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="cx2PITXGb1-phFpU49ZU-11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="cx2PITXGb1-phFpU49ZU-9">
+          <mxGeometry y="52" width="200" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="cx2PITXGb1-phFpU49ZU-12" value="+ getDatabase() : Database&lt;div&gt;+ setDatabse(database: Database)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cx2PITXGb1-phFpU49ZU-9">
+          <mxGeometry y="60" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cx2PITXGb1-phFpU49ZU-13" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0.478;exitY=1.006;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry x="-1" y="3" relative="1" as="geometry">
+            <mxPoint x="401.9800000000001" y="390" as="sourcePoint" />
+            <mxPoint x="247" y="421" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="402" y="421" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cx2PITXGb1-phFpU49ZU-14" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cx2PITXGb1-phFpU49ZU-10" target="cx2PITXGb1-phFpU49ZU-6">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="467" y="250" as="sourcePoint" />
+            <mxPoint x="577" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
